@@ -2,7 +2,8 @@
   "sidebar": {
     "overview": "Dashboard",
     "order": "Order",
-    "transport": "Transport"
+    "transport": "Transport",
+    "product": "Product"
   },
   "language": {
     "en": "English",

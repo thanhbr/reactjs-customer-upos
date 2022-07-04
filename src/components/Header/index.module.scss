@@ -1,0 +1,25 @@
+.header {
+    background-color: #1c2d49;
+    height: 56px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 32px;
+}
+
+.header-right {
+    display: flex;
+}
+
+.separate {
+    position: relative;
+    margin: 0 24px;
+}
+
+.separate span::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: white;
+}

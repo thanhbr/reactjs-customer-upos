@@ -10,6 +10,19 @@
     top: 20px;
     background: var(--white-color);
     border-radius: var(--border-radius);
+    /*box-shadow: var(--box-shadow);*/
+}
+
+.app-header-language .app-header-language__list {
+    display: none;
+}
+
+.app-header-language.active .app-header-language__list {
+    display: block;
+}
+
+.app-header-language.active svg {
+    transform: rotate(180deg);
 }
 
 .app-header-language ul {
@@ -17,12 +30,12 @@
     margin: 0;
     padding: 0;
     color: var(--white-color);
-    margin: 0;
 }
 
 .app-header-language ul li {
     color: black;
     padding: 8px;
+    width: 93px;
 }
 .app-header-language ul li:hover {
     background: var(--default-hover-color);

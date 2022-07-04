@@ -2,7 +2,8 @@
   "sidebar": {
     "overview": "Tổng quan",
     "order": "Đơn hàng",
-    "transport": "Vận chuyển"
+    "transport": "Vận chuyển",
+    "product": "Sản phẩm"
   },
   "language": {
     "en": "Tiếng Anh",
