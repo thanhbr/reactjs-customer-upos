@@ -7,26 +7,26 @@ import { useTranslation } from 'react-i18next';
 export default function () {
     const { t } = useTranslation()
     const [language, setLanguage] = useState('')
-    const [showLanguages, setShowLanguages] = useState('d-none')
+    const [showLanguages, setShowLanguages] = useState('')
 
     const mouseEnterLanguage = () => {
-        setShowLanguages('')
+        setShowLanguages('active')
     }
     const mouseLeaveLanguage = () => {
-        setShowLanguages('d-none')
+        setShowLanguages('')
     }
     const handleLanguage = (e, lang) => {
         i18n.changeLanguage(lang)
-        setShowLanguages('d-none')
+        setShowLanguages('')
         setLanguage(t(`language.${lang}`))
     }
 
     return ( 
-        <div className={'app-header-language'}
+        <div className={'app-header-language ' + showLanguages}
              onMouseEnter={mouseEnterLanguage}
              onMouseLeave={mouseLeaveLanguage}   >
             <p className={'app-header-language__focus'}>{language || t(`language.${listLanguage[0].code}`)}</p>
-            <div className={'app-header-language__list ' + showLanguages || ''}>
+            <div className={'app-header-language__list '}>
                 <ul>
                 {listLanguage.map(lang => (
                    <li key={lang.id} onClick={e => handleLanguage(e, lang.code)}>{t(`language.${lang.code}`)}</li>

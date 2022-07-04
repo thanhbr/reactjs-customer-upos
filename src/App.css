@@ -20,6 +20,7 @@
     --default-hover-color: #E6E8EC;
     --default-hover-color-btn: brightness(60%);
     --background-content : #EBEBF0;
+	/*--box-shadow: 4px 8px 16px rgb(0 0 0 / 8%);*/
 
 
 	/*========== Font and typography ==========*/
@@ -106,4 +107,12 @@ hr {
 
 .d-none {
 	display: none;
+}
+
+/*====================================*/
+html, body, #root {
+	height: 100%;
+}
+.content-wrapper {
+	height: 94%;
 }
