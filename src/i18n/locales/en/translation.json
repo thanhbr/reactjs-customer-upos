@@ -1,0 +1,11 @@
+{
+  "sidebar": {
+    "overview": "Dashboard",
+    "order": "Order",
+    "transport": "Transport"
+  },
+  "language": {
+    "en": "English",
+    "vi": "Vietnamese"
+  }
+}

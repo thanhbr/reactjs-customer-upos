@@ -1,0 +1,35 @@
+.app-header-language {
+    display: flex;
+    cursor: pointer;
+    margin: 0 0 0 32px;
+    position: relative;
+}
+
+.app-header-language__list {
+    position: absolute;
+    top: 20px;
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+}
+
+.app-header-language ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--white-color);
+    margin: 0;
+}
+
+.app-header-language ul li {
+    color: black;
+    padding: 8px;
+}
+.app-header-language ul li:hover {
+    background: var(--default-hover-color);
+    border-radius: var(--border-radius);
+}
+
+.app-header-language__focus {
+    color: var(--white-color);
+    width: 67px;
+}

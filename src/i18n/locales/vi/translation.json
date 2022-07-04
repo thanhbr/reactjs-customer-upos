@@ -1,0 +1,11 @@
+{
+  "sidebar": {
+    "overview": "Tổng quan",
+    "order": "Đơn hàng",
+    "transport": "Vận chuyển"
+  },
+  "language": {
+    "en": "Tiếng Anh",
+    "vi": "Tiếng Việt"
+  }
+}
