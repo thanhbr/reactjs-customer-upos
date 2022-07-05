@@ -1,32 +1,24 @@
-import './index.css'
-import {useState} from "react";
+import {useState} from "react"
 import listLanguage from './list'
-import i18n from '../../i18n/translation/i18n';
-import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n/translation/i18n'
+import { useTranslation } from 'react-i18next'
+import css from './index.module.scss'
+import cls from "clsx"
 
-export default function () {
+const Index = () => {
     const { t } = useTranslation()
     const [language, setLanguage] = useState('')
-    const [showLanguages, setShowLanguages] = useState('')
 
-    const mouseEnterLanguage = () => {
-        setShowLanguages('active')
-    }
-    const mouseLeaveLanguage = () => {
-        setShowLanguages('')
-    }
     const handleLanguage = (e, lang) => {
         i18n.changeLanguage(lang)
-        setShowLanguages('')
         setLanguage(t(`language.${lang}`))
+        localStorage.setItem('i18n', lang)
     }
 
     return ( 
-        <div className={'app-header-language ' + showLanguages}
-             onMouseEnter={mouseEnterLanguage}
-             onMouseLeave={mouseLeaveLanguage}   >
-            <p className={'app-header-language__focus'}>{language || t(`language.${listLanguage[0].code}`)}</p>
-            <div className={'app-header-language__list '}>
+        <div className={cls(css.header)}>
+            <p className={cls(css.focus)}>{language || t(`language.${localStorage.getItem('i18n')}`)}</p>
+            <div className={cls(css.list)}>
                 <ul>
                 {listLanguage.map(lang => (
                    <li key={lang.id} onClick={e => handleLanguage(e, lang.code)}>{t(`language.${lang.code}`)}</li>
@@ -37,5 +29,7 @@ export default function () {
                 <path d="M10 13.0941L15.0084 8.08578L13.8309 6.90662L10 10.74L6.17003 6.90662L4.9917 8.08495L10 13.0941Z" fill="#B9BBD3"/>
             </svg>
         </div>
-    );
+    )
 }
+
+export default Index
