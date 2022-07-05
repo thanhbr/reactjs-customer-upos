@@ -17,7 +17,7 @@ const Index = () => {
 
     return ( 
         <div className={cls(css.header)}>
-            <p className={cls(css.focus)}>{language || t(`language.${localStorage.getItem('i18n')}`)}</p>
+            <p className={cls(css.focus)}>{language || t(`language.${localStorage.getItem('i18n') || 'vi'}`)}</p>
             <div className={cls(css.list)}>
                 <ul>
                 {listLanguage.map(lang => (

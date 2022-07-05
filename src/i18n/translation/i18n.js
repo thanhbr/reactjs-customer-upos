@@ -22,7 +22,7 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: lang,
+        fallbackLng: lang || 'vi',
         debug: false,
         // debug: true,
         interpolation: {
