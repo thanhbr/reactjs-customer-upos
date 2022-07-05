@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    cursor: pointer;
+    margin: 0 0 0 32px;
+    position: relative;
+    &:hover {
+        .list {
+            display: block;
+        }
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+    .focus {
+        color: var(--white-color);
+        width: 67px;
+    }
+    .list {
+        position: absolute;
+        top: 20px;
+        background: var(--white-color);
+        border-radius: var(--border-radius);
+        /*box-shadow: var(--box-shadow);*/
+        display: none;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        color: var(--white-color);
+    }
+    ul li {
+        color: black;
+        padding: 8px;
+        width: 93px;
+    }
+    ul li:hover {
+        background: var(--default-hover-color);
+        border-radius: var(--border-radius);
+    }
+}

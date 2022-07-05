@@ -1,22 +1,22 @@
 import './index.module.scss'
-import Notification from '../Notification';
-import Message from '../Message';
-import Language from '../Language';
-import UserInformation from '../UserInformation';
+import Notification from '../Notification'
+import Message from '../Message'
+import Language from '../Language'
+import UserInformation from '../UserInformation'
 import css from './index.module.scss'
-import clsx from "clsx";
+import cls from "clsx"
 
-export default function () {
+const Index = () => {
     return ( 
-        <div className={clsx(css['header'])}>
-            <div className={clsx(css['header-left'])}>
-                <img className={clsx(css['logo-header'])} alt="upos-logo" src={"/my-assets/images/logo/full-logo-v1.png"} />
+        <div className={cls(css.header)}>
+            <div className={cls(css.left)}>
+                <img className={cls(css.logo)} alt={"upos-logo"} src={"/my-assets/images/logo/full-logo-v1.png"} />
             </div>
-            <div className={clsx(css['header-right'])}>
+            <div className={cls(css.right)}>
                 <Notification />
                 <Message />
                 <Language />
-                <div className={clsx(css['separate'])}>
+                <div className={cls(css.separate)}>
                     <span>|</span>
                 </div>
                 <UserInformation />
@@ -24,3 +24,5 @@ export default function () {
         </div>
     );
 }
+
+export default Index

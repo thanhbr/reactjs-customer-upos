@@ -15,12 +15,14 @@ const resources = {
     }
 };
 
+const lang = localStorage.getItem('i18n')
+
 i18n
     .use(Backend)
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: 'vi',
+        fallbackLng: lang,
         debug: false,
         // debug: true,
         interpolation: {
