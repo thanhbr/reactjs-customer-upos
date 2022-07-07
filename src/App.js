@@ -1,7 +1,5 @@
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-// import Login from './pages/Login'
-import './App.css'
+import Header from './components/header'
+import Sidebar from './components/sidebar'
 
 
 function App() {

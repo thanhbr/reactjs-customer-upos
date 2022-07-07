@@ -1,8 +1,8 @@
 import './index.module.scss'
-import Notification from '../Notification'
-import Message from '../Message'
-import Language from '../Language'
-import UserInformation from '../UserInformation'
+import Notification from '../notification'
+import Message from '../message'
+import Language from '../language'
+import UserInformation from '../userInformation'
 import css from './index.module.scss'
 import cls from "clsx"
 
