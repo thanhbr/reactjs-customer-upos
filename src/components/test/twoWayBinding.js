@@ -85,7 +85,7 @@ const TwoWayBinding = () => {
     }
     const changeSkill = (e) => {
         let id = e.target.value
-        setVSkill(prevState => {
+        setVSkill(() => {
             let isChecked = vSkill.includes(id)
             if(isChecked) {
                 return vSkill.filter(item => item !== id)

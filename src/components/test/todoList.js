@@ -10,8 +10,8 @@ const TodoList = () => {
     })
 
     const handleAdd = () => {
-        if(work.length == 0) return
-        setWorks(prevState => {
+        if(work.length === 0) return
+        setWorks(() => {
             const newWork   = [...works, work]
             const jsonWorks = JSON.stringify(newWork)
             localStorage.setItem('works', jsonWorks)
@@ -27,7 +27,7 @@ const TodoList = () => {
                        value={work}
                        onChange={e => setWork(e.target.value)}
                        onKeyPress={e => {
-                           if (e.target.value == 0) return
+                           if (e.target.value === 0) return
                            if (e.charCode  === 13) handleAdd()
                        }} />
                 <button onClick={handleAdd}>Add</button>
